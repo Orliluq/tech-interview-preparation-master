@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // function MaxValue(shares) {
 //   let potencial = -Infinity;
 //   for (let i = 0; i < shares.length; i++) {
@@ -76,6 +77,29 @@ module.exports = MaxValue;
 
 // }
 
+=======
+function MaxValue (shares) {
+  // Your code here:
+
+  function MaxValue(shares) {
+    let max = shares[0]; // Initialize the maximum with the first element
+  
+    for (let i = 1; i < shares.length; i++) {
+      if (shares[i] > max) {
+        max = shares[i];
+      }
+    }
+  
+    return max;
+  }
+  
+  const shares = [4, 3, 2, 5, 11];
+  console.log(MaxValue(shares)); // Output: 11
+  
+
+}
+
+>>>>>>> e2f94fba9f42d1b15e8f4dda53d76383a0c9797c
 // function MaxValue(shares) {
 //   return Math.max(...shares);
 // }
@@ -112,4 +136,8 @@ module.exports = MaxValue;
 //   return maxProfit;
 // }
 
+<<<<<<< HEAD
 // module.exports = MaxValue
+=======
+module.exports = MaxValue
+>>>>>>> e2f94fba9f42d1b15e8f4dda53d76383a0c9797c

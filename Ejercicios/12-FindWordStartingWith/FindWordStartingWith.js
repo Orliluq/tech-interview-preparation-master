@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // function FindWordStartingWith(book, query) {
 //   // Your code here:
 
@@ -71,6 +72,19 @@ function FindWordStartingWith(book, query) {
       } else {
         i++;
       }
+=======
+function FindWordStartingWith(book, query) {
+  const { text } = book; // obtener el texto del libro
+  const words = text.split(/\s+/); // dividir el texto en palabras utilizando espacios como separadores
+  const result = []; // arreglo para almacenar los índices de las palabras encontradas
+
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i].toLowerCase(); // convertir la palabra actual a minúsculas para compararla con el query
+
+    if (word.startsWith(query.toLowerCase())) {
+      // si la palabra comienza con el query (ignorando mayúsculas/minúsculas)
+      result.push(i); // añadir el índice de la palabra al resultado
+>>>>>>> e2f94fba9f42d1b15e8f4dda53d76383a0c9797c
     }
   }
 
@@ -79,6 +93,7 @@ function FindWordStartingWith(book, query) {
 
 const book = {
   id: 1,
+<<<<<<< HEAD
   text: "Erase una vez un libro de palabras que era un poco aburrido pero tenia mucho aunque algunas palabras locas, y Gama lo leia todo el tiempo por que estaba mas loco aun",
 };
 console.log(FindWordStartingWith(book, "de")); //([23])
@@ -118,3 +133,13 @@ module.exports = FindWordStartingWith;
 
 
 // module.exports = FindWordStartingWith;
+=======
+  text: 'Erase una vez un libro de palabras que era un poco aburrido pero tenia mucho aunque algunas palabras locas'
+};
+
+console.log(FindWordStartingWith(book, 'de')); // Output: [23]
+console.log(FindWordStartingWith(book, 'un')); // Output: [6, 14, 43]
+
+
+module.exports = FindWordStartingWith;
+>>>>>>> e2f94fba9f42d1b15e8f4dda53d76383a0c9797c

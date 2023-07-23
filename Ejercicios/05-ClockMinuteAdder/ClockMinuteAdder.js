@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function clockMinuteAdder(time, minutesToAdd) {
   // Your code here:
 
@@ -46,6 +47,21 @@ module.exports = clockMinuteAdder;
   // const newHours = Math.floor(totalMinutes / 60) % 12 || 12;
   // const newMinutes = totalMinutes % 60;
   // return `${newHours.toString().padStart(2, '0')}:${newMinutes.toString().padStart(2, '0')}`;
+=======
+function clockMinuteAdder (time, minutesToAdd) {
+  // Your code here:
+
+  // Convertir la hora en formato de cadena a horas y minutos separados
+  const [hours, minutes] = time.split(':').map(Number);
+
+  // Calcular la nueva cantidad total de minutos
+  const totalMinutes = hours * 60 + minutes + minutesToAdd;
+
+  // Obtener las nuevas horas y minutos
+  const newHours = Math.floor(totalMinutes / 60) % 12 || 12;
+  const newMinutes = totalMinutes % 60;
+  return `${newHours.toString().padStart(2, '0')}:${newMinutes.toString().padStart(2, '0')}`;
+>>>>>>> e2f94fba9f42d1b15e8f4dda53d76383a0c9797c
 
 // otra forma:
   // const [hours, minutes] = time.split(':').map(Number);
@@ -65,8 +81,14 @@ module.exports = clockMinuteAdder;
 
   // // Devolver la nueva hora en formato HH:MM
   // return `${formattedHours}:${formattedMinutes}`;
+<<<<<<< HEAD
 // }
 
 // module.exports = clockMinuteAdder;
+=======
+}
+
+module.exports = clockMinuteAdder;
+>>>>>>> e2f94fba9f42d1b15e8f4dda53d76383a0c9797c
 
 
